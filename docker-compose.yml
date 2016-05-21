@@ -1,0 +1,44 @@
+version: '2'
+
+services:
+
+  seed-1:
+    build:
+      context: .
+      dockerfile: ./docker/cluster-seed-1.dockerfile
+    ports:
+      - "4000:4000"
+    networks:
+      - cluster-network
+
+  node-1:
+    build:
+      context: .
+      dockerfile: ./docker/cluster-node-1.dockerfile
+    ports:
+      - "4000:4000"
+    networks:
+      - cluster-network
+
+  node-2:
+    build:
+      context: .
+      dockerfile: ./docker/cluster-node-2.dockerfile
+    ports:
+      - "4000:4000"
+    networks:
+      - cluster-network
+
+  node-3:
+    build:
+      context: .
+      dockerfile: ./docker/cluster-node-3.dockerfile
+    ports:
+      - "4000:4000"
+    networks:
+      - cluster-network
+
+networks:
+  cluster-network:
+    driver: bridge
+
