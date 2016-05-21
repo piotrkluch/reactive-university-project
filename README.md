@@ -22,4 +22,28 @@ test/akka/demo/HelloAkkaSpec.scala
 sbt compile
 sbt test
 ```
- 
+
+## Cluster installation
+
+### Using docker
+
+1. Clone the repository with:
+
+```
+git clone https://github.com/szymonlyszkowski/reactive-university-project.git
+```
+
+2. Enter newly created directory and run the container (build from within the container):
+
+```
+cd ./reactive-university-project
+docker-compose build
+```
+
+3. Run the containers with docker-compose:
+
+```
+docker-compose up
+```
+
+
